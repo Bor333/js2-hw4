@@ -1,6 +1,6 @@
 <meta charset="UTF-8">
 <script>
-    const text = "One: 'Hi Mary.' Two: 'Oh, hi.'\n" +
+    let text = "One: 'Hi Mary.' Two: 'Oh, hi.'\n" +
         "One: 'How are you doing?'\n" +
         "Two: 'I'm doing alright. How about you?'\n" +
         "    One: 'Not too bad. The weather is great isn't it?'\n" +
@@ -17,5 +17,9 @@
         "Two: 'I'll see you next time.'\n" +
         "One: 'Sure. Bye.'";
 
+    //1
     console.log(text.replace(/'/g,'"'));
+
+    //2
+    console.log(text.replace(/\B'/g,'"'));
 </script>
