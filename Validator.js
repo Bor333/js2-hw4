@@ -43,10 +43,12 @@ class Validator {
             }
         }
     }
+
     _addErrorMsg(field){
         let error = `<div class="${this.errorClass}">${this.errors[field.name]}</div.`;
         field.parentNode.insertAdjacentHTML('beforeend', error);
     }
+
     _watchField(field){
         field.addEventListener('input', () => {
             let error = field.parentNode.querySelector(`.${this.errorClass}`);
